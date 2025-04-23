@@ -1,3 +1,4 @@
 <?php
 define('APP', dirname(dirname(__FILE__)));
-define('URL', 'http://localhost/gymphysical');
+define('URL', 'http://www.gymphysical.com');
+?>
