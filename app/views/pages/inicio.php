@@ -1,5 +1,5 @@
 <?php require_once APP . '/views/inc/header.php' ?>
-
+<?php session_start(); ?>
 <body>
     <!-- Sección Principal, aqui deberiamos poner algo como la primera frase nada mas entrar -->
     <?php 
@@ -145,7 +145,7 @@
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-4">Contáctanos</h2>
-            <form id="main-contact-form" class="contact-form" name="contact-form" action="../config/mensajeUsuario.php" method="POST">
+            <form id="main-contact-form" class="contact-form" name="contact-form" action="/envio_mensaje" method="POST">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre: </label>
                     <input type="text" id="nombre" name="nombre" class="form-control" required="required">
@@ -156,7 +156,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Mensaje</label>
-                    <input type="text" id="subject" name="subject" class="form-control" rows="3" required="required">
+                    <textarea name="mensaje" id="mensaje" required="required" class="form-control" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
