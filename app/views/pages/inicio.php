@@ -2,6 +2,9 @@
 
 <body>
     <!-- Sección Principal, aqui deberiamos poner algo como la primera frase nada mas entrar -->
+    <?php 
+    echo'HAAAAAAAAAAAAAAAASSS iniciado sesion con los siguientes parametros' . $_SESSION['usuario_nombre'];
+    ?>
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row align-items-center">
@@ -10,7 +13,7 @@
                     <p class="lead">Con la app de entrenamiento Gym Physical, obtienes un programa de fitness
                         personalizado
                         que te da resultados reales.</p>
-                    <a id="registrarse-principal" href="../html/registrarse.html" class="btn btn-success">Obtén tu plan
+                    <a id="registrarse-principal" url="/views/registro" class="btn btn-success">Obtén tu plan
                         de entrenamiento ahora</a>
                 </div>
                 <div class="col-md-6">
@@ -24,6 +27,41 @@
             </div>
         </div>
     </section>
+
+    <section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="mb-4">¿Cómo funciona GymPhysical?</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <div class="mb-3">
+            <i class="bi bi-person-plus display-4 text-primary"></i>
+          </div>
+          <h5>1. Regístrate gratis</h5>
+          <p>Crea tu cuenta en segundos y accede a tu panel personal.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <div class="mb-3">
+            <i class="bi bi-bullseye display-4 text-success"></i>
+          </div>
+          <h5>2. Define tus objetivos</h5>
+          <p>Elige entre perder peso, ganar músculo o mantenerte en forma.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <div class="mb-3">
+            <i class="bi bi-calendar-check display-4 text-warning"></i>
+          </div>
+          <h5>3. Recibe tu plan</h5>
+          <p>Accede a rutinas y consejos adaptados a ti cada semana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <!-- Sección de Servicios -->
@@ -107,17 +145,22 @@
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-4">Contáctanos</h2>
-            <form>
+            <form id="main-contact-form" class="contact-form" name="contact-form" action="../config/mensajeUsuario.php" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required="required">
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" id="email" name="email" class="form-control" required="required">
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <input type="text" id="subject" name="subject" class="form-control" rows="3" required="required">
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+            
         </div>
     </section>
 </body>

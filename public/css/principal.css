@@ -9,18 +9,22 @@ align-items: center;
 .rounded-navbar {
   border-radius: 30px;
   margin: 5vh 15px 0;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   background-color: rgba(224, 227, 230, 0.9) ;
 }
 .fixed-top {
   position: fixed;
-  top: 5vh;
-  right: 15%;
-  left: 15%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90vw;
   z-index: 1030;
 }
 .navbar-nav {
-  gap: 15px; 
+  gap: 15px;
+  justify-content: center;
+  align-items: center; 
 }
 .nav-lin {
 background-color: rgba(248, 249, 250, 0.9); 
@@ -34,6 +38,8 @@ font-size: 16px;
 margin: 4px 2px; 
 cursor: pointer; 
 border-radius: 100em; 
+white-space: nowrap;
+margin-left: auto;
 }
 .nav-lin:hover {
   color: #1cb7c2 ;
@@ -64,11 +70,11 @@ footer{
   text-align: center;
   margin-bottom: 60%;
 }
-#logo1{
+.logo1{
 max-width: 60px;
 height: auto;
 }
-#logo1:hover{
+.logo1:hover{
 opacity: 0.7;
 transition: opacity 0.4s ease-in-out;
 }

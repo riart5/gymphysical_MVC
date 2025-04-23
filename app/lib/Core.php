@@ -9,7 +9,17 @@ class Core
     public function __construct()
     {
       $url = $this->getUrl();
-    
+      
+      $url = explode('/',$_SERVER['REQUEST_URI']);
+      /* esta parte del codigo es super importante, basicamente lo que dice es si la URL no tiene ningun parametro despues de .com 
+      queremos que cargue la vista de inicio
+      en cambio si despues encontramos un parametro que nuestro caso es un metodo
+      queremos que cargue las vistas de cada metodo sin romper la logica de nuestro controlador */
+      if (empty($url[1]) || $url[1] == '') {
+        $url[1] = 'inicio';
+      }
+      $url[0] = 'views';
+      var_dump($url);
       if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php'))
       {
         $this->controller = ucwords($url[0]);
@@ -18,9 +28,9 @@ class Core
 
       require_once '../app/controllers/' . $this->controller . '.php';
       $this->controller = new $this->controller;
-    
       if(isset($url[1]))
       {
+        echo $url[1];
         if(method_exists($this->controller, $url[1]))
         {
           $this->method = $url[1];
@@ -34,11 +44,10 @@ class Core
 
     public function getUrl()
     {
-        if (isset($_GET['url'])) {
+        if (isset($REQUEST_URI['url'])) {
+            
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
-            $url = explode('/', $url);
-
             return $url;
         }
     }

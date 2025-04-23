@@ -1,12 +1,15 @@
+<?php
+//require_once '../app/config/procesar.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">S
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="/css/registro.js"></script>
     <link rel="stylesheet" href="/css/registro.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,23 +17,27 @@
 
 <body>
     <div id="container-registro-sesion">
-        <form class="register-form">
+        <form method="POST" action="registro_proceso" class="register-form" id="formulario">
 
             <div class="row mb-4 align-items-center">
                 <div class="col-6">
                     <h1>Registrarse</h1>
                 </div>
                 <div class="col-6">
-                    <a href="../html/principal.html">
+                    <a href="..">
                         <img id="logo" class="img-fluid" alt="Imagen responsive" src="/img/LogoDef.png">
                     </a>
                 </div>
             </div>
 
             <div class="input-container">
-                <input type="text" id="nombreCompleto" name="nombreCompleto" required class="form-control"
-                    placeholder=" ">
+                <input type="text" id="nombre" name="nombre" required class="form-control" placeholder=" ">
                 <label for="nombreCompleto">Nombre completo</label>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="apellido" name="surname" required class="form-control" placeholder=" ">
+                <label for="apellido">Apellido</label>
             </div>
 
             <div class="input-container">
@@ -39,24 +46,19 @@
             </div>
 
             <div class="input-container">
-                <input type="text" id="nombreDeUsuario" name="nombreDeUsuario" required class="form-control"
-                    placeholder=" ">
-                <label for="nombreDeUsuario">Nombre de usuario</label>
-            </div>
-
-            <div class="input-container">
                 <input type="password" id="password" name="password" required class="form-control" placeholder=" ">
                 <label for="password">Contraseña</label>
             </div>
 
             <div class="input-container">
-                <input type="password" id="confirm-password" name="confirm-password" required class="form-control"
+                <input type="password" id="confirmpassword" name="confirmpassword" required class="form-control"
                     placeholder=" ">
                 <label for="confirm-password">Confirmar contraseña</label>
             </div>
 
             <div class="mb-4 terms-container">
-                <a class="terms-text" href="../html/privacidad/TerminosyCondiciones.html">Acepto los terminos y condiciones</a>
+                <a class="terms-text" href="../html/privacidad/TerminosyCondiciones.html">Acepto los terminos y
+                    condiciones</a>
                 <div class="input_wrapper">
                     <input type="checkbox" class="switch_4" required>
                     <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
@@ -70,10 +72,9 @@
                     </svg>
                 </div>
             </div>
-            <button type="submit" data-hover="¡Regístrate!">Empieza ya!</button>
+            <button type="submit" data-hover="¡Regístrate!"  onclick="chechForm()">Empieza ya!</button>
         </form>
     </div>
 </body>
 
 </html>
-<?php require_once APP . '/views/inc/footer.php';

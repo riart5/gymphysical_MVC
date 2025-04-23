@@ -7,9 +7,8 @@
     <title>Gym Physical</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS (Make sure to link this correctly) -->
     <link rel="stylesheet" href="/css/principal.css">
-    <!-- Optional: Font Awesome for icons -->
+    <!-- Enlaces de internet para tener iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +25,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-li" href="/html/principal.html">
+                            <a class="nav-li" href="inicio">
                                 <img class="logo1" src="../../content/LogoDef.png" alt="Imagen del logo">
                             </a>
                         </li>
@@ -44,10 +43,10 @@
                             <a class="nav-lin" href="#">Nutrición</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-lin" href="/html/registrarse.html">Registrarse</a>
+                            <a class="nav-lin" href="registro">Registrarse</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-lin" id="iniciar" href="/html/iniciarsesion.html">Iniciar Sesion</a>
+                            <a class="nav-lin" id="iniciar" href="inicioSesion">Iniciar Sesion</a>
                         </li>
                     </ul>
                 </div>

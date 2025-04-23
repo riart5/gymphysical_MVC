@@ -13,6 +13,7 @@ class Control
     if(file_exists('../app/views/pages/' . $view . '.php'))
     {
       require_once '../app/views/pages/' . $view . '.php';
+      
     }
     else
     {
