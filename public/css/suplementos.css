@@ -1,0 +1,35 @@
+#suplementos {
+    background-color: #f8f9fa;
+}
+
+.suplemento-card {
+    transition: transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.suplemento-card:hover {
+    transform: scale(1.03);
+}
+
+.suplemento-card .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.btn-azul-gym {
+    background-color: #1cb7c2 !important;
+    color: white !important;
+    border: none;
+    transition: background-color 0.2s ease !important;
+}
+
+.btn-azul-gym:hover {
+    background-color: #159ca5 !important;
+    color: white !important;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}

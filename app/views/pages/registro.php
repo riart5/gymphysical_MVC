@@ -50,11 +50,6 @@
                 <label for="password">Contraseña</label>
             </div>
 
-            <div class="input-container">
-                <input type="password" id="confirmpassword" name="confirmpassword" required class="form-control"
-                    placeholder=" ">
-                <label for="confirm-password">Confirmar contraseña</label>
-            </div>
 
             <div class="mb-4 terms-container">
                 <a class="terms-text" href="../html/privacidad/TerminosyCondiciones.html">Acepto los terminos y

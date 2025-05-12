@@ -7,7 +7,7 @@
     <title>Gym Physical</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/header_inicio.css">
     <!-- Enlaces de internet para tener iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -16,10 +16,6 @@
 
 <body>
     <header>
-    <?php 
-    if ($_SESSION['usuario_nombre']){
-    }
-    ?>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top rounded-navbar">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,11 +25,14 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-li" href="#">
+                            <a class="nav-li" href="inicio">
                                 <img class="logo1" src="../../content/LogoDef.png" alt="Imagen del logo">
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-lin" href="producto">Entrenamientos</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-lin" href="suplementos">Suplementos</a>
                         </li>
@@ -44,14 +43,10 @@
                             <a class="nav-lin" href="nutricion">Nutrición</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-lin" href="registro">Registrarse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-lin" id="iniciar" href="inicioSesion">Iniciar Sesion</a>
+                            <a id="logout" href="logout">Log Out</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    

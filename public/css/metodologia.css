@@ -1,0 +1,12 @@
+#metodologia i {
+    font-size: 2.5rem;
+}
+
+#metodologia .card {
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+#metodologia .card:hover {
+    transform: scale(1.03);
+}

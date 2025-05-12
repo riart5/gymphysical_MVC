@@ -36,7 +36,7 @@
             </div>
             <input type="hidden" id="InicioSesion" name="InicioSesion" value="InicioSesion">
             <div class="row-4 mb-4">
-                <button type="submit" class="enviar" data-hover="¡Iniciar Sesión!">¡GymPhysical!</button>
+                <button type="submit" href="principal" class="enviar" data-hover="¡Iniciar Sesión!">¡GymPhysical!</button>
             </div>
             <p>¿No tienes cuenta aún?<a href="registro">Registrate ahora</a></p>
         </form>
