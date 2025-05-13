@@ -15,9 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['actualizar'])) {
         Usuario::actualizarEjercicio(
             $_POST['ejercicio_id'],
+            intval($_POST['kg']),
             intval($_POST['series']),
-            intval($_POST['repeticiones']),
-            floatval($_POST['kg'])
+            floatval($_POST['repeticiones'])
         );
         header("Location: /mi_entrenamiento");
         exit;
@@ -99,9 +99,6 @@ $ejercicios = Usuario::obtenerEntrenamientoAgrupadoPorFecha($usuario_id);
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="text-center mb-4">
-                                        <a href="vista_comparativa" class="btn btn-info">Comparar entrenamientos por fechas</a>
-                                    </div>
                                     <?php
                                 endif;
                             }
@@ -109,6 +106,9 @@ $ejercicios = Usuario::obtenerEntrenamientoAgrupadoPorFecha($usuario_id);
                         </div>
                     </div>
                 <?php endforeach; ?>
+                <div class="text-center mb-4">
+                    <a href="vista_comparativa" class="btn btn-info">Comparar entrenamientos por fechas</a>
+                </div>
 
                 <form method="POST" class="text-center mt-4">
                     <button type="submit" name="vaciar" class="btn btn-danger">Vaciar entrenamiento</button>
