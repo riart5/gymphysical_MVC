@@ -138,6 +138,10 @@ class Views extends Control
         $this->load_view('nutricion');
     }
 
+    public function vista_comparativa() {
+        $this->load_view('vista_comparativa');
+    }
+
     public function producto()
     {
         $this->load_view('producto');

@@ -124,12 +124,37 @@ class Usuario
         $stmt = $conn->prepare("SELECT id, nombre_ejercicio, series, repeticiones, kg, DATE(fecha) as fecha FROM entrenamientos WHERE usuario_id = :uid ORDER BY fecha DESC");
         $stmt->bindParam(':uid', $usuario_id);
         $stmt->execute();
-        $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $agrupado = [];
-        foreach ($datos as $row) {
-            $agrupado[$row['fecha']][] = $row;
+        foreach ($result as $e) {
+            $fecha = $e['fecha'];
+            if (!isset($agrupado[$fecha])) {
+                $agrupado[$fecha] = [];
+            }
+            $agrupado[$fecha][] = $e;
         }
         return $agrupado;
+    }
+
+    public static function obtenerDatosPorFecha($usuario_id, $fecha)
+    {
+        $conn = getConnection();
+        $stmt = $conn->prepare("SELECT nombre_ejercicio, series, repeticiones, kg
+        FROM entrenamientos
+        WHERE usuario_id = :usuario_id AND DATE(fecha) = :fecha");
+        $stmt->bindParam(':usuario_id', $usuario_id);
+        $stmt->bindParam(':fecha', $fecha);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function getEntrenamientoPorFecha($usuario_id, $fecha) {
+        $conn = getConnection();
+        $stmt = $conn->prepare("SELECT nombre_ejeercicio, kg, series, repeticiones FROM entrenamientos WHERE usuario_id = :uid AND DATE(fecha) = :fecha");
+        $stmt->bindParam(':uid', $usuario_id);
+        $stmt->bindParam(':fecha', $fecha);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
