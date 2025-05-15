@@ -11,13 +11,9 @@ if (isset($_SESSION['usuario_email'])) {
         <div class="container">
             <h2 class="text-center mb-4">Conoce a nuestra nutricionista</h2>
             <div class="row align-items-center">
-                <div class="col-md-4 text-center">
-                    <img src="/content/nutricionista.jpg" alt="FOTO DE LA NOVIA DEL DRAGAN" class="img-fluid rounded-circle"
-                        style="max-width: 200px;">
-                </div>
                 <div class="col-md-8">
-                    <h4 class="fw-bold">LA NOVIA DEL DRAGAN</h4>
-                    <p class="lead">Graduada en Nutrición Humana y Dietética por la Universidad de MISSKO, LA NOVIA DEL DRAGAN te
+                    <h4 class="fw-bold">Sara Valtini Marín</h4>
+                    <p class="lead">Graduada en Nutrición Humana y Dietética por la Universidad de Barcelona, Sara Valtini Marín te
                         orientará hacia hábitos saludables para complementar tus entrenamientos de forma efectiva.</p>
                 </div>
             </div>
