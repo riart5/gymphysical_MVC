@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-li" href="#">
+                            <a class="nav-li" href="inicio">
                                 <img class="logo1" src="../../content/LogoDef.png" alt="Imagen del logo">
                             </a>
                         </li>

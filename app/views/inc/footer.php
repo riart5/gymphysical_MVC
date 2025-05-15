@@ -1,7 +1,7 @@
 <footer class="bg-light text-center py-3">
     <div class="container">
         <section class="mb-4">
-            <!-- Facebook -->
+            <!-- Facebook  por ejemplo mas bien es visual, si es necesario se usaaria otra red social o cualquier otra cosa-->
             <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
                 data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 

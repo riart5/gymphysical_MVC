@@ -1,6 +1,6 @@
 <?php
 require "connection.php";
-
+//este es el documento que procesa el inicio de sesion como se puede ver con la query a la base de datos
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['InicioSesion'])) {
     $username = $_POST["nombreDeUsuario"];
     $password = $_POST['password'];
@@ -22,8 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['InicioSesion'])) {
 
             header("Location: /producto"); 
             exit;
-        } else {
-            echo "Usuario o contraseña incorrectos.";
         }
     } catch (PDOException $e) {
         echo "Error al iniciar sesión: " . $e->getMessage();

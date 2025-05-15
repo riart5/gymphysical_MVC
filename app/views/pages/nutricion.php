@@ -1,71 +1,77 @@
-<?php require_once APP . '/views/inc/header_condicional.php'; ?>
+<?php
+if (isset($_SESSION['usuario_email'])) {
+    require_once APP . '/views/inc/header_inicio.php';
+} else {
+    require_once APP . '/views/inc/header.php';
+}
+?>
 
 <body>
-    <section class="py-5 bg-light" id="nutricion">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="mb-4 text-center">Nutrición y Rendimiento</h2>
-            <p class="lead text-center mb-5">
-                Una buena alimentación es la base de tu progreso. Aquí te ofrecemos consejos y recursos para complementar tu entrenamiento con una nutrición adecuada.
-            </p>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-
-                <!-- Tarjeta 1 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">🍗 Macronutrientes</h5>
-                            <p class="card-text">
-                                Aprende qué son las proteínas, carbohidratos y grasas. Saber cómo equilibrarlos te ayudará a alcanzar tus objetivos más rápido.
-                            </p>
-                        </div>
-                    </div>
+            <h2 class="text-center mb-4">Conoce a nuestra nutricionista</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="/content/nutricionista.jpg" alt="FOTO DE LA NOVIA DEL DRAGAN" class="img-fluid rounded-circle"
+                        style="max-width: 200px;">
                 </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">🧠 Planificación de comidas</h5>
-                            <p class="card-text">
-                                Te damos ideas para organizar tus comidas semanales de forma sencilla, sin necesidad de dietas estrictas.
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-md-8">
+                    <h4 class="fw-bold">LA NOVIA DEL DRAGAN</h4>
+                    <p class="lead">Graduada en Nutrición Humana y Dietética por la Universidad de MISSKO, LA NOVIA DEL DRAGAN te
+                        orientará hacia hábitos saludables para complementar tus entrenamientos de forma efectiva.</p>
                 </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">💧 Hidratación</h5>
-                            <p class="card-text">
-                                Mantente bien hidratado durante el día y durante el entrenamiento. El agua es clave para la energía y la recuperación.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">💊 Suplementos básicos</h5>
-                            <p class="card-text">
-                                ¿No sabes por dónde empezar? Aquí te explicamos qué suplementos son útiles realmente: proteína, creatina, omega-3...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </div>
+    </section>
 
-            <!-- Recursos útiles -->
-            <div class="text-center mt-5">
-                <h4>🔗 Recursos útiles</h4>
-                <p>
-                    Recomendamos apps como <a href="https://www.myfitnesspal.com/" target="_blank">MyFitnessPal</a> para controlar tus comidas o <a href="https://www.yazio.com/es" target="_blank">Yazio</a> si buscas recetas saludables.
-                </p>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tipos de dieta que ofrecemos</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Dieta 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Dieta de Volumen</h5>
+                            <p class="card-text">Ideal para quienes buscan ganar masa muscular. Rica en calorías,
+                                proteínas y carbohidratos complejos. Incluye comidas frecuentes, batidos post-entreno y
+                                snacks ricos en energía.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dieta 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Dieta de Definición</h5>
+                            <p class="card-text">Diseñada para reducir grasa corporal manteniendo la masa muscular. Alta
+                                en proteínas, baja en azúcares y grasas, y con control de calorías. Se adapta según el
+                                gasto energético.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dieta 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Dieta Vegetariana Fitness</h5>
+                            <p class="card-text">Plan basado en vegetales, con alto contenido proteico usando legumbres,
+                                tofu, huevos, frutos secos y derivados. Equilibrada y energética para mantener el
+                                rendimiento deportivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dieta 4 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Dieta para Principiantes</h5>
+                            <p class="card-text">Una guía accesible para quienes se inician en el mundo fitness.
+                                Explicaciones claras, platos simples y adaptaciones para el día a día sin
+                                complicaciones.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

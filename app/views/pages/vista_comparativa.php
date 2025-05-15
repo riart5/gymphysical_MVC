@@ -69,32 +69,32 @@ const datos2 = " . json_encode($datos2) . ";
                     {
                         label: 'Series (Fecha 1)',
                         data: obtenerValores(datos1, 'series'),
-                        backgroundColor: 'rgba(231, 21, 21, 0.6)',
+                        backgroundColor: 'rgba(231, 7, 7, 0.6)',
                     },
                     {
                         label: 'Series (Fecha 2)',
                         data: obtenerValores(datos2, 'series'),
-                        backgroundColor: 'rgba(81, 172, 233, 0.3)',
+                        backgroundColor: 'rgb(3, 154, 255)',
                     },
                     {
                         label: 'Repeticiones (Fecha 1)',
                         data: obtenerValores(datos1, 'repeticiones'),
-                        backgroundColor: 'rgba(245, 178, 7, 0.6)',
+                        backgroundColor: 'rgba(231, 7, 7, 0.6)',
                     },
                     {
                         label: 'Repeticiones (Fecha 2)',
                         data: obtenerValores(datos2, 'repeticiones'),
-                        backgroundColor: 'rgba(35, 160, 243, 0.3)',
+                        backgroundColor: 'rgb(3, 154, 255)',
                     },
                     {
                         label: 'Kg (Fecha 1)',
                         data: obtenerValores(datos1, 'kg'),
-                        backgroundColor: 'rgba(56, 223, 5, 0.6)',
+                        backgroundColor: 'rgba(231, 7, 7, 0.6)',
                     },
                     {
                         label: 'Kg (Fecha 2)',
                         data: obtenerValores(datos2, 'kg'),
-                        backgroundColor: 'rgba(241, 7, 230, 0.3)',
+                        backgroundColor: 'rgb(3, 154, 255)',
                     }
                 ]
             }

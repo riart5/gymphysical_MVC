@@ -1,5 +1,6 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
+//este es basicamente las fucniones que llamamos en el buscador, simplemente funciones dondee queremos que cargue una vista llamandola haciendo que luego sea mas facil cargar codigo necesario como una simple vista
 class Views extends Control
 {
 
@@ -19,13 +20,13 @@ class Views extends Control
         ini_set('display_errors', '1');
         ini_set('display_sturtup_erros', '1');
         error_reporting(E_ALL);
-        echo 'Estoy dentro de la funcion registro_proceso';
+        //echo 'Estoy dentro de la funcion registro_proceso';
         //var_dump($_POST);
         $require = require_once __DIR__ . '/../config/Usuario.php';
         if (!class_exists('Usuario')) {
             echo 'La clase Usuario no existe';
         } else {
-            echo 'La clase Usuario SI existe<br>';
+            echo 'La clase Usuario SI existe';
         }
         echo 'Hola estoy entrando en el require';
         $usuario_modelo = new Usuario();
@@ -39,11 +40,11 @@ class Views extends Control
         //var_dump($correo_existe);
 
         if ($correo_existe) {
-            echo 'El correo ya está registrado';
+            //echo 'El correo ya está registrado';
         } else {
-            echo 'El metodo insert se produce ODIO MI VIDAAAA';
+            //echo 'El metodo insert se produce estoy llorando de alegria';
             $exito = $usuario_modelo->insert(nombre: $nombre, apellido: $apellido, email: $email, password: $password);
-            echo 'Resultado de \$exito: ';
+            //echo 'Resultado de \$exito: ';
             //var_dump($exito);
             if ($exito) {
                 echo 'Usuarioo registrado correctamente';
@@ -56,13 +57,13 @@ class Views extends Control
     }
     public function inicio_proceso()
     {
-        echo 'Post recibido';
+        //echo 'Post recibido';
         //var_dump('$_POST');
 
-        echo 'Acabas de iniciar sesion';
-        ini_set('display_errors', '1');
-        ini_set('display_sturtup_erros', '1');
-        error_reporting(E_ALL);
+        //echo 'Acabas de iniciar sesion';
+        //ini_set('display_errors', '1');
+        //ini_set('display_sturtup_erros', '1');
+       // error_reporting(E_ALL);
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
@@ -78,16 +79,19 @@ class Views extends Control
             $_SESSION['usuario_email'] = $usuario['email'];
             $_SESSION['password'] = $usuario['password'];
             $_SESSION['usuario_id'] = $usuario['id'];
-            echo 'Has iniciado sesion con los siguientes parametros' . $_SESSION['usuario_nombre'] . ", tu email es " . $_SESSION['usuario_email'] . $_SESSION['password'];
+            //echo 'Has iniciado sesion con los siguientes parametros' . $_SESSION['usuario_nombre'] . ", tu email es " . $_SESSION['usuario_email'] . $_SESSION['password'];
             $this->load_view('principal');
 
         } else {
-            echo 'Correo o contraseña incorrectos, prueba otra vez.';
+            echo header("Location: /inicioSesion")."<script type=\"text/javascript\"> alert('Usuario o contraseña incorrecta');</script>";
+            
+            exit;
+            
         }
     }
     public function envio_mensaje()
     {
-        //Reseteamos variables a 0.
+        
         //var_dump($_POST);
 
         $noum = $_POST['nombre'];
@@ -98,7 +102,7 @@ class Views extends Control
 
         if (mail('aribot@institutmvm.cat', $asunto, $mensaje)) {
             $this->load_view('inicio');
-            echo "Correo enviado con parametros" . $asunto;
+            //echo "Correo enviado con parametros" . $asunto;
 
         }
 
@@ -107,6 +111,10 @@ class Views extends Control
     public function inicioSesion()
     {
         $this->load_view('signup');
+    }
+
+    public function error404() {
+        $this->load_view('error404');
     }
 
     public function principal()
@@ -164,7 +172,7 @@ class Views extends Control
             echo 'No se proporcionó ID o sesión inválida';
             return;
         }
-        var_dump($_SESSION['id_a_modificar']);
+        //var_dump($_SESSION['id_a_modificar']);
         $id = $_SESSION['id_a_modificar'];
         $usuario_id = $_SESSION['usuario_id'];
         $ejercicio = Usuario::obtenerEjercicioPorId($usuario_id, $id);

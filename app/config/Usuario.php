@@ -1,6 +1,6 @@
 <?php
 require_once APP . '/config/connection.php';
-
+//aqui encontramos todas las funciones necesarias para hacer querys a la base de datos y poder llamarlas desde otro lado del proyecto asi teniendo todo mas organizado
 class Usuario
 {
 

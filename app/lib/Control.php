@@ -21,4 +21,5 @@ class Control
     }
   }
 }
-?>
+//esto fue compliccado porque es una logica que nos facilita basntate la manera de gestionar los arhcivos por ejemplo anyadiendo el .php final para tener que solo poner el nombree de lo que quyeremos cargar
+?> 

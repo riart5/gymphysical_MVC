@@ -66,9 +66,10 @@ transition: 0.4s ease-in-out;
 }
 
 footer{
+  position: flex;
+  margin: 0 auto;
   background-color: lightgray;
   text-align: center;
-  margin-bottom: 60%;
 }
 .logo1{
 max-width: 60px;

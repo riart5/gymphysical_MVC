@@ -1,5 +1,5 @@
 <?php 
-    require_once '../app/config/procesar_inicio.php';
+    //require_once '../app/config/procesar_inicio.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

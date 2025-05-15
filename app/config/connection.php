@@ -1,6 +1,7 @@
 <?php
 function getConnection() {
 $servername = "localhost";
+//$servername = getenv("servername", 0); //lo deejamos comentado porque en realidad se deberia implementar esta medida de seguridad pero por falta de tiempo descartamos esta idea proporcionada por el Albert
 $username = "gym";
 $password = "qwerty";
 $dbname = "GymPhysical";
@@ -16,4 +17,3 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 }
-?>
