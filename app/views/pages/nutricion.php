@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario_email'])) {
 ?>
 
 <body>
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" style="margin-top: 50px">
         <div class="container">
             <h2 class="text-center mb-4">Conoce a nuestra nutricionista</h2>
             <div class="row align-items-center">

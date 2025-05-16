@@ -1,7 +1,7 @@
 <?php require_once APP . '/views/inc/header_condicional.php'; ?>
 
 <body>
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" style="margin-top: 50px">
         <div class="container">
             <h2 class="text-center text-primary fw-bold mb-4">Nuestra Metodología</h2>
             <p class="lead text-center mb-5">

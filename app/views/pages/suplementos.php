@@ -3,7 +3,7 @@ require_once APP . '/views/inc/header_condicional.php';
 ?>
 
 <body>
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" style="margin-top: 50px">
         <div class="container">
             <h2 class="text-center fw-bold text-primary mb-5">Nuestros Suplementos</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">

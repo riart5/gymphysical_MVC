@@ -40,7 +40,7 @@ $ejercicios = Usuario::obtenerEntrenamientoAgrupadoPorFecha($usuario_id);
 ?>
 
 <body>
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" style="margin-top: 50px">
         <div class="container">
             <h2 class="mb-4 text-center">Mi Entrenamiento</h2>
 

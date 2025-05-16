@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre_ejercicio'])) 
 ?>
 
 <body>
-    <section class="py-5 bg-light" id="producto">
+    <section class="py-5 bg-light" style="margin-top: 50px" id="producto">
         <div class="container">
             <h2 class="mb-4 text-center">Organizador de Entrenamiento</h2>
 
